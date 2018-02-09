@@ -1,0 +1,29 @@
+{
+  "name": "mycrypto-about-page",
+  "version": "1.0.0",
+  "description": "About page that lives at about.mycrypto.com",
+  "main": "gulpfile.js",
+  "author": "MyCrypto",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "dist": "gulp build"
+  },
+  "dependencies": {
+    "bootstrap": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-cssnano": "*",
+    "gulp-file": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sitemap": "*",
+    "gulp-uglify": "*",
+    "run-sequence": "*",
+    "zepto": "*"
+  }
+}

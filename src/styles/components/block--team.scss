@@ -1,0 +1,32 @@
+.block--team {
+  text-align: center;
+  margin-top: $space-md;
+  margin-bottom: $space-lg;
+}
+
+.team__image {
+  max-width: 100%;
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 100%;
+  box-shadow: 16px 16px 47px 2px rgba(0,0,0,.07);
+  display: block;
+}
+
+.team__icons img {
+  transition: transform ease 200ms;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform ease 200ms;
+  }
+}
+
+.team__name {
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+
+.team__title {
+  margin-bottom: $space-xs;
+}
