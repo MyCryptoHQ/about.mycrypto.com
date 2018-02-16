@@ -15,6 +15,8 @@ const runSequence        = require( 'run-sequence'            )
 const sass               = require( 'gulp-sass'               )
 const uglify             = require( 'gulp-uglify'             )
 const sitemap            = require( 'gulp-sitemap'            )
+const imageResize        = require( 'gulp-image-resize'       )
+const imageMin           = require( 'gulp-imagemin'           )
 
 // custom variables
 const srcFolder          = 'src/'
@@ -22,6 +24,7 @@ const dstFolder          = 'dist/'
 const img_srcFolder      = srcFolder + 'images/'
 const style_srcFolder    = srcFolder + 'styles/'
 const scripts_srcFolder  = srcFolder + 'scripts/'
+const photos_srcFolder   = srcFolder + 'team-photos/'
 
 
 // Error / Success Handling
@@ -65,6 +68,20 @@ gulp.task('copy', function() {
     .pipe(notify(onSuccess( 'Copy' )))
 })
 
+// Compress team photos
+gulp.task('compress_photos', function() {
+    gulp.src(photos_srcFolder + '*')
+      .pipe(imageResize({
+        width: 500,
+        height: 500,
+        upscale: false,
+        crop: true
+      }))
+      .pipe(imageMin())
+      .pipe(gulp.dest(dstFolder + 'images/team-photos/'))
+      .pipe(notify(onSuccess('Compressed photos')))
+})
+
 
 // styles: Compile and Minify style / CSS Files
 const style_srcFile  = 'about-master.scss'
@@ -103,6 +120,6 @@ gulp.task( 'watch_content',  function() { gulp.watch(srcFolder + '**/*.html', ['
 
 gulp.task( 'watch',   ['watch_js', 'watch_styles', 'watch_content'] )
 
-gulp.task( 'build',   ['scripts', 'styles', 'copy'] )
+gulp.task( 'build',   ['scripts', 'styles', 'copy', 'compress_photos'] )
 
 gulp.task( 'default', ['build', 'watch'] )
