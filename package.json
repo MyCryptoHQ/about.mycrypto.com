@@ -25,5 +25,9 @@
     "gulp-uglify": "*",
     "run-sequence": "*",
     "zepto": "*"
+  },
+  "devDependencies": {
+    "gulp-image-resize": "0.13.0",
+    "gulp-imagemin": "4.1.0"
   }
 }
