@@ -1,0 +1,21 @@
+{
+    //gitUrls will be the same since we don't have separate develop/staging repos
+
+    "environments": {
+        "develop": {
+            "gitUrl": "git@github.com:MyCryptoHQ/about.mycrypto.com.git",
+            "distFolder": "dist",
+            "buildCommand": "npm install && npm run dist"
+        },
+        "staging": {
+            "gitUrl": "git@github.com:MyCryptoHQ/about.mycrypto.com.git",
+            "distFolder": ""            
+        },
+        "prod": {
+            "gitUrl": ""
+        },
+        "beta": {
+            "gitUrl": ""
+        }
+    }
+}
