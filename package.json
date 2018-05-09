@@ -23,6 +23,7 @@
     "gulp-sass": "*",
     "gulp-sitemap": "*",
     "gulp-uglify": "*",
+    "hoek": "^5.0.3",
     "run-sequence": "*",
     "zepto": "*"
   },
