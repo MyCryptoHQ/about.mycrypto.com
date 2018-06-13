@@ -43,3 +43,21 @@
     max-width: 100%;
   }
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding: 1rem 0 0;
+}
+
+.nav-col {
+  text-align: right;
+
+  a {
+    padding: .5rem;
+    white-space: nowrap;
+  }
+}
