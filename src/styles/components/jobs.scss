@@ -1,0 +1,51 @@
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  label {
+    position: relative;
+    display: block;
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s;
+}
+
+
+input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+label::after {
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  display: block;
+  transition: all .35s;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
