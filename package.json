@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bootstrap": "*",
-    "gulp": "*",
+    "gulp": "3.9.1",
     "gulp-autoprefixer": "*",
     "gulp-clean": "*",
     "gulp-concat": "*",
